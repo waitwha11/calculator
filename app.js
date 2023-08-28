@@ -8,11 +8,19 @@ let submit = document.getElementById('submit')
 plus.onclick = function () {
     submit.classList.add('pluss')
     submit.classList.remove('minuss')
+    plus.classList.toggle('charged')
+    if(minus.classList.contains('charged')){
+        minus.classList.remove('charged')
+    }
 }
 
 minus.onclick = function () {
     submit.classList.add('minuss')
     submit.classList.remove('pluss')
+    minus.classList.toggle('charged')
+    if(plus.classList.contains('charged')){
+        plus.classList.remove('charged')
+    }
 }
 
 submit.onclick = function () {
